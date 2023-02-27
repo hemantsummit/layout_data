@@ -6,10 +6,10 @@ os.environ["KMP_DUPLICATE_LIB_OK"]="True"
 ocr = PaddleOCR(use_angle_cls=True, lang='en')
 
 # Path to the input images folder
-input_folder = './documents/form_1040'
+input_folder = './documents/pfs_form'
 
 # Path to the output JSON files folder
-output_folder = './new_documents/form_1040'
+output_folder = './new_documents/pfs_form'
 
 # Loop through all the images in the input folder
 for image_name in os.listdir(input_folder):
