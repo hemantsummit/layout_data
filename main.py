@@ -19,7 +19,7 @@ for image_name in os.listdir(input_folder):
         image_path = os.path.join(input_folder, image_name)
 
         # Perform OCR on the image
-        result = ocr.ocr(image_path, cls=True, use_gpu=True)
+        result = ocr.ocr(image_path, cls=True)
         # print(result)
         # Create a dictionary to store the results
         results_dict = []
