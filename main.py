@@ -6,10 +6,10 @@ os.environ["KMP_DUPLICATE_LIB_OK"]="True"
 ocr = PaddleOCR(use_angle_cls=True, lang='en')
 
 # Path to the input images folder
-input_folder = './documents/pan'
+input_folder = './documents/form_1040'
 
 # Path to the output JSON files folder
-output_folder = './new_documents/pan'
+output_folder = './new_documents/form_1040'
 
 # Loop through all the images in the input folder
 for image_name in os.listdir(input_folder):
@@ -19,7 +19,7 @@ for image_name in os.listdir(input_folder):
         image_path = os.path.join(input_folder, image_name)
 
         # Perform OCR on the image
-        result = ocr.ocr(image_path, cls=True)
+        result = ocr.ocr(image_path, cls=True, use_gpu=True)
         # print(result)
         # Create a dictionary to store the results
         results_dict = []
